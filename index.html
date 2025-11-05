@@ -69,16 +69,17 @@
   <label for="egi">EGI yang diuji</label>
   <select id="egi" onchange="isiTotalSoal()">
     <option value="">-- Pilih EGI --</option>
-    <option value="EXCA OB">EXCA OB</option>
-    <option value="EXCA COAL">EXCA COAL</option>
-    <option value="EXCA SUPPORT">EXCA SUPPORT</option>
-    <option value="DT OB">DT OB</option>
-    <option value="WT">WT</option>
-    <option value="LT FT">LT FT</option>
-    <option value="GRADER">GRADER</option>
-    <option value="Small dozer">Small dozer</option>
-    <option value="Medium dozer">Medium dozer</option>
-    <option value="BOMAG">BOMAG</option>
+    <option value="OB-EXCAVATOR KELAS 50 TON">EXCA OB</option>
+    <option value="OB-EXCAVATOR KELAS 100 TON">EXCA COAL</option>
+    <option value="COAL-EXCAVATOR KELAS 50 TON">EXCA SUPPORT</option>
+    <option value="SUPPORT-EXCAVATOR KELAS 20 TON">EXCA SUPPORT</option>    
+    <option value="OB-DT/OHT">DT OB</option>
+    <option value="SUPPORT-WATER TRUCK">WT</option>
+    <option value="SUPPORT-LUBE TRUCK/FUEL TRUCK">LT FT</option>
+    <option value="SUPPORT-MOTOR GRADER">GRADER</option>
+    <option value="SUPPORT-DOZER D85ESS">Small dozer</option>
+    <option value="SUPPORT-DOZER D375/D10T">Medium dozer</option>
+    <option value="SUPPORT-BOMAG">BOMAG</option>
   </select>
 
   <label for="totalSoal">Total Soal</label>
@@ -104,8 +105,8 @@
 const totalSoalEGI = {
   "OB-EXCAVATOR KELAS 50 TON ": 61,
   "OB-EXCAVATOR KELAS 100 TON ": 61,
-  "COAL-EXCAVATOR ": 62,
-  "SUPPORT-EXCAVATOR": 52,
+  "COAL-EXCAVATOR KELAS 50 TON ": 62,
+  "SUPPORT-EXCAVATOR KELAS 20 TON": 52,
   "OB-DT/OHT": 72,
   "SUPPORT-WATER TRUCK": 67,
   "SUPPORT-LUBE TRUCK/FUEL TRUCK": 58,
@@ -159,6 +160,7 @@ function hitungNilai() {
 
 </body>
 </html>
+
 
 
 
