@@ -55,6 +55,10 @@
       background-color: #c8e6c9;
       color: #2e7d32;
     }
+    .need-ofr {
+      background-color: #fff3cd;
+      color: #856404;
+    }
     .need-training {
       background-color: #ffcdd2;
       color: #b71c1c;
@@ -69,17 +73,17 @@
   <label for="egi">EGI yang diuji</label>
   <select id="egi" onchange="isiTotalSoal()">
     <option value="">-- Pilih EGI --</option>
-    <option value="OB-EXCAVATOR KELAS 50 TON">EXCA OB</option>
-    <option value="OB-EXCAVATOR KELAS 100 TON">EXCA COAL</option>
-    <option value="COAL-EXCAVATOR KELAS 50 TON">EXCA SUPPORT</option>
-    <option value="SUPPORT-EXCAVATOR KELAS 20 TON">EXCA SUPPORT</option>    
-    <option value="OB-DT/OHT">DT OB</option>
-    <option value="SUPPORT-WATER TRUCK">WT</option>
-    <option value="SUPPORT-LUBE TRUCK/FUEL TRUCK">LT FT</option>
-    <option value="SUPPORT-MOTOR GRADER">GRADER</option>
-    <option value="SUPPORT-DOZER D85ESS">Small dozer</option>
-    <option value="SUPPORT-DOZER D375/D10T">Medium dozer</option>
-    <option value="SUPPORT-BOMAG">BOMAG</option>
+    <option value="OB - EXCAVATOR KELAS 50 TON ">OB - EXCAVATOR KELAS 50 TON </option>
+    <option value="OB - EXCAVATOR KELAS 100 TON ">OB - EXCAVATOR KELAS 100 TON </option>
+    <option value="COAL - EXCAVATOR KELAS 50 TON ">COAL - EXCAVATOR KELAS 50 TON </option>
+    <option value="SUPPORT - EXCAVATOR KELAS 20 TON ">SUPPORT - EXCAVATOR KELAS 20 TON </option>    
+    <option value="OB - DT/OHT ">OB - DT/OHT </option>
+    <option value="SUPPORT - WATER TRUCK ">SUPPORT - WATER TRUCK </option>
+    <option value="SUPPORT - LUBE TRUCK/FUEL TRUCK ">SUPPORT - LUBE TRUCK/FUEL TRUCK </option>
+    <option value="SUPPORT - MOTOR GRADER ">SUPPORT - MOTOR GRADER </option>
+    <option value="SUPPORT - DOZER D85ESS ">SUPPORT - DOZER D85ESS </option>
+    <option value="SUPPORT - DOZER D375/D10T ">SUPPORT - DOZER D375/D10T </option>
+    <option value="SUPPORT - BOMAG ">SUPPORT - BOMAG </option>
   </select>
 
   <label for="totalSoal">Total Soal</label>
@@ -103,17 +107,17 @@
 // Kamu bisa update nilai di bawah ini jika ada perubahan jumlah soal.
 // Format: "Nama EGI": total_soal,
 const totalSoalEGI = {
-  "OB-EXCAVATOR KELAS 50 TON ": 61,
-  "OB-EXCAVATOR KELAS 100 TON ": 61,
-  "COAL-EXCAVATOR KELAS 50 TON ": 62,
-  "SUPPORT-EXCAVATOR KELAS 20 TON": 52,
-  "OB-DT/OHT": 72,
-  "SUPPORT-WATER TRUCK": 67,
-  "SUPPORT-LUBE TRUCK/FUEL TRUCK": 58,
-  "SUPPORT-MOTOR GRADER": 66,
-  "SUPPORT-DOZER D85ESS": 57,
-  "SUPPORT-DOZER D375/D10T": 61,
-  "SUPPORT-BOMAG": 51
+  "OB - EXCAVATOR KELAS 50 TON ": 61,
+  "OB - EXCAVATOR KELAS 100 TON ": 61,
+  "COAL - EXCAVATOR KELAS 50 TON ": 62,
+  "SUPPORT - EXCAVATOR KELAS 20 TON ": 52,
+  "OB - DT/OHT ": 72,
+  "SUPPORT - WATER TRUCK ": 67,
+  "SUPPORT - LUBE TRUCK/FUEL TRUCK ": 58,
+  "SUPPORT - MOTOR GRADER ": 66,
+  "SUPPORT - DOZER D85ESS ": 57,
+  "SUPPORT - DOZER D375/D10T ": 61,
+  "SUPPORT - BOMAG ": 51
 };
 
 // Saat EGI dipilih → otomatis isi total soal
@@ -142,8 +146,8 @@ function hitungNilai() {
     hasil.className = "result kompeten";
     status = "KOMPETEN";
   }
-  if (nilai < 80 && nilai > 60 ) {
-    hasil.className = "result kompeten";
+  else if (nilai < 80 && nilai > 60 ) {
+    hasil.className = "result need-ofr";
     status = "NEED OFR";
   } else {
     hasil.className = "result need-training";
@@ -160,7 +164,3 @@ function hitungNilai() {
 
 </body>
 </html>
-
-
-
-
