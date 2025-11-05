@@ -102,16 +102,17 @@
 // Kamu bisa update nilai di bawah ini jika ada perubahan jumlah soal.
 // Format: "Nama EGI": total_soal,
 const totalSoalEGI = {
-  "EXCA OB": 61,
-  "EXCA COAL": 62,
-  "EXCA SUPPORT": 52,
-  "DT OB": 72,
-  "WT": 67,
-  "LT FT": 58,
-  "GRADER": 66,
-  "Small dozer": 57,
-  "Medium dozer": 61,
-  "BOMAG": 51
+  "OB-EXCAVATOR KELAS 50 TON ": 61,
+  "OB-EXCAVATOR KELAS 100 TON ": 61,
+  "COAL-EXCAVATOR ": 62,
+  "SUPPORT-EXCAVATOR": 52,
+  "OB-DT/OHT": 72,
+  "SUPPORT-WATER TRUCK": 67,
+  "SUPPORT-LUBE TRUCK/FUEL TRUCK": 58,
+  "SUPPORT-MOTOR GRADER": 66,
+  "SUPPORT-DOZER D85ESS": 57,
+  "SUPPORT-DOZER D375/D10T": 61,
+  "SUPPORT-BOMAG": 51
 };
 
 // Saat EGI dipilih → otomatis isi total soal
@@ -136,9 +137,13 @@ function hitungNilai() {
   const hasil = document.getElementById('hasil');
   let status = "";
 
-  if (nilai >= 80) {
+   if (nilai >= 80) {
     hasil.className = "result kompeten";
     status = "KOMPETEN";
+  }
+  if (nilai < 80 && nilai > 60 ) {
+    hasil.className = "result kompeten";
+    status = "NEED OFR";
   } else {
     hasil.className = "result need-training";
     status = "NEED TRAINING";
@@ -154,5 +159,6 @@ function hitungNilai() {
 
 </body>
 </html>
+
 
 
